@@ -1925,6 +1925,9 @@ def AV_ax_xtick_log(axe_p, xtick_p, base_p=10.0):
 	x_exponent_min_l = np.ceil(AV_log(x_p=xtick_min_l, base_p=base_p))
 	x_exponent_max_l = np.ceil(AV_log(x_p=xtick_max_l, base_p=base_p))
 
+	
+	x_exponent_low_l = np.linspace(0.0, x_exponent_min_l, 11)
+
 	print(x_exponent_min_l)
 	print(x_exponent_max_l)
 
