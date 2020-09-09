@@ -1916,6 +1916,9 @@ def AV_ax_xtick_log(axe_p, xtick_p, base_p=10.0):
 	"""
 	x-axis starts from 0.
 	"""
+	
+	new_a = np.delete(xtick_p, xtick_p==0.0)
+
 	xtick_max_l = np.max(xtick_p)
 
 	x_exponent_max_l = AV_log(x_p=xtick_max_l, base_p=base_p)
