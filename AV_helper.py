@@ -1927,6 +1927,9 @@ def AV_ax_xtick_log(axe_p, xtick_p, base_p=10.0):
 
 	
 	x_exponent_low_l = np.linspace(0.0, x_exponent_min_l, 11)
+	x_exponent_high_l = np.linspace(x_exponent_min_l, x_exponent_max_l, (x_exponent_max_l - x_exponent_min_l)*11 - )
+
+	((x_exponent_max_l - x_exponent_min_l) - 1)
 
 	print(x_exponent_low_l)
 
