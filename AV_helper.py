@@ -1912,6 +1912,11 @@ def AV_ax_xscale(axe_p, xscale_p, xscale_base_p=10):
 	elif (xscale_p == "log"):
 		axe_p.set_xscale(xscale_p, basex=xscale_base_p)
 
+def AV_ax_xtick_log(axe_p, xtick_p):
+	"""
+	x-axis starts from 0.
+	"""
+
 def AV_ax_xtick(axe_p, xtick_p, minor_p=False):
 	if (type(xtick_p).__name__ == "list") & (np.shape(xtick_p)[0] == 0):
 		# This is true when ytick_p = []
