@@ -1230,9 +1230,9 @@ def AV_cc(arg_p, alpha_p=0.6):
     return mcolors.to_rgba(arg_p, alpha=alpha_p)
 
 ################################ Various plots ################################
-def AV_plot_line_errorbar(axe_p, x_p, y_p, yerr_p, xerr_p, color_p="b", label_p=None, capsize_p=5, capsize_thick_p=3, linewidth_p=5):
+def AV_plot_line_errorbar(axe_p, x_p, y_p, yerr_p, xerr_p, color_p="b", label_p=None, capsize_length_p=5, capsize_thick_p=3, linewidth_p=5):
 
-	axe_p.errorbar(x=x_p, y=y_p, yerr=yerr_p, capsize=capsize_p, mfc=color_p, label=label_p, linewidth=linewidth_p, elinewidth=capsize_thick_p)
+	axe_p.errorbar(x=x_p, y=y_p, yerr=yerr_p, capsize=capsize_length_p, mfc=color_p, label=label_p, linewidth=linewidth_p, elinewidth=capsize_thick_p)
 
 def AV_plot_scatter(\
     x_p, y_p, \
