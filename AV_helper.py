@@ -1832,6 +1832,11 @@ def AV_fig_maximized(fig_p):
 	plt.pause(1.0)
 
 def AV_fig_savefig(fig_p, abs_path_FN_p, dpi_p=300, format_p="png"):
+	"""
+	Params
+		abs_path_FN_p : The file's extension should be compatible to format_p
+	"""
+
 	print("AV_fig_savefig: " + abs_path_FN_p)
 	fig_p.savefig(abs_path_FN_p, bbox_inches='tight', pad_inches=0, dpi=dpi_p, quality="best", format=format_p)
 
