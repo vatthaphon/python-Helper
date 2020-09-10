@@ -1831,9 +1831,9 @@ def AV_fig_maximized(fig_p):
 	plt.show(block=False)
 	plt.pause(1.0)
 
-def AV_fig_savefig(fig_p, abs_path_FN_p):
+def AV_fig_savefig(fig_p, abs_path_FN_p, dpi_p=300):
 	print("AV_fig_savefig: " + abs_path_FN_p)
-	fig_p.savefig(abs_path_FN_p, bbox_inches = 'tight', pad_inches = 0)
+	fig_p.savefig(abs_path_FN_p, bbox_inches='tight', pad_inches=0, dpi=dpi_p)
 
 def AV_fig_closefig(fig_p):
 	plt.close(fig_p)
