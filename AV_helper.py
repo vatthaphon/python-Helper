@@ -1979,14 +1979,11 @@ def AV_ax_xtick_xticklabel_top(axe_p, xtick_p, xtick_label_p, minor_p):
 
 
 def AV_ax_xticklabel(axe_p, xtick_label_p):
-	if xtick_label_p is None:
-		axe_p.set_xticklabels(None)
+	if (type(xtick_label_p).__name__ == "list") & (np.shape(xtick_label_p)[0] == 0):
+		# This is true when xtick_label_p = []
+		axe_p.xaxis.set_major_formatter(plt.NullFormatter())
 	else:
-		if (type(xtick_label_p).__name__ == "list") & (np.shape(xtick_label_p)[0] == 0):
-			# This is true when xtick_label_p = []
-			axe_p.xaxis.set_major_formatter(plt.NullFormatter())
-		else:
-			axe_p.set_xticklabels(xtick_label_p)
+		axe_p.set_xticklabels(xtick_label_p)
 
 def AV_ax_xticklabel_rotation(axe_p, rotation_p):
 	axe_p.set_xticklabels(axe_p.get_xticklabels(), rotation=rotation_p, ha="right")
