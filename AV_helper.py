@@ -1869,6 +1869,20 @@ def AV_ax_make_tick(var_p, \
 
 		return majtick_l, mintick_l
 
+def AV_ax_make_tick_log_minor(majorticks_p):
+    """
+    Params
+        majorticks_p : A lest of major ticks in the log scale, e.g. [0.0001, 0.001, 0.01, 0.1]
+    """
+    def AV_ax_make_xtick_log_minor(majortick_begin_p):
+        return np.array((np.linspace(majortick_begin_p, majortick_begin_p*10.0, 10))[1:9])
+
+    minorticks_l = []
+    for majortick_l in majorticks_p:
+        minorticks_l = AV_concat( (minorticks_l, AV_ax_make_xtick_log_minor(majortick_l)) )
+
+    return minorticks_l
+
 def AV_ax_tickwidth(axe_p, tickwidth_p=2, ticklength_p=10):
 	axe_p.tick_params(axis="both", which="major", width=tickwidth_p, length=ticklength_p)
 	axe_p.tick_params(axis="both", which="minor", width=tickwidth_p, length=ticklength_p/2.0)
