@@ -1916,31 +1916,6 @@ def AV_ax_xscale(axe_p, xscale_p, xscale_base_p=10):
 	elif (xscale_p == "log"):
 		axe_p.set_xscale(xscale_p, basex=xscale_base_p)
 
-def AV_ax_xtick_log(axe_p, xtick_p, base_p=10.0):
-	"""
-	x-axis starts from 0.
-	"""
-	
-	xtick_nozero_l = np.delete(xtick_p, xtick_p==0.0)
-
-	xtick_min_l = np.min(xtick_nozero_l)
-	xtick_max_l = np.max(xtick_nozero_l)
-
-	x_exponent_min_l = np.ceil(AV_log(x_p=xtick_min_l, base_p=base_p))
-	x_exponent_max_l = np.ceil(AV_log(x_p=xtick_max_l, base_p=base_p))
-
-	
-	# x_exponent_low_l = np.linspace(0.0, x_exponent_min_l, 11)
-	x_exponent_low_l = np.arange(x_exponent_min_l, 0.0, x_exponent_min_l/10.0)
-	x_exponent_high_l = np.linspace(x_exponent_min_l, x_exponent_max_l, int((x_exponent_max_l - x_exponent_min_l)*11 - ((x_exponent_max_l - x_exponent_min_l) - 1)))
-
-
-	
-
-	print(x_exponent_low_l)
-	print(x_exponent_high_l)
-
-
 def AV_ax_xtick(axe_p, xtick_p, minor_p=False):
 	if (type(xtick_p).__name__ == "list") & (np.shape(xtick_p)[0] == 0):
 		# This is true when ytick_p = []
@@ -2034,7 +2009,7 @@ def AV_ax_yticklabel(axe_p, ytick_label_p):
 	"""
 	ytick_label_p=[]
 	"""
-	
+
 	if (type(ytick_label_p).__name__ == "list") & (np.shape(ytick_label_p)[0] == 0):
 		# This is true when ytick_label_p = []
 		axe_p.yaxis.set_major_formatter(plt.NullFormatter())
