@@ -2031,6 +2031,10 @@ def AV_ax_ytick(axe_p, ytick_p, minor_p=False):
 		axe_p.yaxis.set_minor_formatter(plt.NullFormatter())
 
 def AV_ax_yticklabel(axe_p, ytick_label_p):
+	"""
+	ytick_label_p=[]
+	"""
+	
 	if (type(ytick_label_p).__name__ == "list") & (np.shape(ytick_label_p)[0] == 0):
 		# This is true when ytick_label_p = []
 		axe_p.yaxis.set_major_formatter(plt.NullFormatter())
