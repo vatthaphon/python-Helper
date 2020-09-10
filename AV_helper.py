@@ -1979,6 +1979,10 @@ def AV_ax_xtick_xticklabel_top(axe_p, xtick_p, xtick_label_p, minor_p):
 
 
 def AV_ax_xticklabel(axe_p, xtick_label_p):
+	"""
+	xtick_label_p=[]
+	"""
+
 	if (type(xtick_label_p).__name__ == "list") & (np.shape(xtick_label_p)[0] == 0):
 		# This is true when xtick_label_p = []
 		axe_p.xaxis.set_major_formatter(plt.NullFormatter())
