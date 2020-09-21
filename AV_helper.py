@@ -1230,12 +1230,12 @@ def AV_cc(arg_p, alpha_p=0.6):
     return mcolors.to_rgba(arg_p, alpha=alpha_p)
 
 ################################ Various plots ################################
-def AV_plot_line_ConfInt(axe_p, x_p, y_p, yerr_p, label_p=None, color_p="b", linewidth_p=5, alpha_p=0.2):
+def AV_plot_line_ConfInt(axe_p, x_p, y_p, yerr_p, label_p=None, color_p="b", linewidth_p=5, linestyle_p="-", alpha_p=0.2):
 	"""
 	yerr_p should be positive.
 	"""
 
-	axe_p.plot(x_p, y_p, color=color_p, linewidth=linewidth_p, label=label_p)
+	axe_p.plot(x_p, y_p, color=color_p, linewidth=linewidth_p, linestyle=linestyle_p, label=label_p)
 	axe_p.fill_between(x_p, y_p - yerr_p, y_p + yerr_p, alpha=alpha_p, color=color_p)
 
 
