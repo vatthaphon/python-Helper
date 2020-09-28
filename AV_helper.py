@@ -244,6 +244,10 @@ def AV_Ones(dims_p, dtype_p=None):
 		return np.full(dims_p, 1.0, dtype=dtype_p)
 
 def AV_log(x_p, base_p=10.0):
+	"""
+	Do log element-wise
+	"""
+
 	return np.divide(np.log(x_p), np.log(base_p)) # I use np.divide to make sure that the division is done element-wise.
 
 def AV_sleep(t_p=1):
