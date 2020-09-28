@@ -245,7 +245,7 @@ def AV_Ones(dims_p, dtype_p=None):
 
 def AV_log(x_p, base_p=10.0):
 	"""
-	Do log element-wise
+	Do log element-wise.
 	"""
 
 	return np.divide(np.log(x_p), np.log(base_p)) # I use np.divide to make sure that the division is done element-wise.
