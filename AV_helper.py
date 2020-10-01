@@ -150,7 +150,7 @@ def AV_smb_absPathToWork():
 
     absPathToWork_l = []
 
-    # The 1st path is the path to the "vattha" computer.
+    ## The 1st path is the path to the "vattha" computer.
     if AV_client_id() 	== (AV_get_all_client_id())["vattha"]:
         # absPathToWork_l.append("/media/vatthap1/Data/Work")
         absPathToWork_l.append("D:\\vattha\\Data\\Work")
@@ -162,8 +162,11 @@ def AV_smb_absPathToWork():
         absPathToWork_l.append("Z:\\Data\\Work")
     elif AV_client_id() == (AV_get_all_client_id())["nam"]:		
         absPathToWork_l.append("Z:\\Data\\Work")
+    elif AV_client_id() == (AV_get_all_client_id())["cr"]:		
+        absPathToWork_l.append("Z:\\Data\\Work")
 
-    # The 2nd path is the path to the "pre" computer.
+
+    ## The 2nd path is the path to the "pre" computer.
     if AV_client_id() 	== (AV_get_all_client_id())["vattha"]:
         # absPathToWork_l.append("/run/user/1000/gvfs/smb-share:server=192.168.0.150,share=vattha/Data/Work")
         absPathToWork_l.append("F:\\Data\\Work")
@@ -175,6 +178,8 @@ def AV_smb_absPathToWork():
         absPathToWork_l.append("F:\\Data\\Work")
     elif AV_client_id() == (AV_get_all_client_id())["nam"]:
         absPathToWork_l.append("F:\\Data\\Work")
+    elif AV_client_id() == (AV_get_all_client_id())["cr"]:		
+        absPathToWork_l.append("Y:\\Data\\Work")        
      
     # The 3rd path is the path to the "yok" computer.
     if AV_client_id()   == (AV_get_all_client_id())["vattha"]:
@@ -187,7 +192,9 @@ def AV_smb_absPathToWork():
     elif AV_client_id() == (AV_get_all_client_id())["thanaphon"]:       
         absPathToWork_l.append("G:\\Data\\Work")    
     elif AV_client_id() == (AV_get_all_client_id())["nam"]:       
-        absPathToWork_l.append("G:\\Data\\Work")    
+        absPathToWork_l.append("G:\\Data\\Work")
+    elif AV_client_id() == (AV_get_all_client_id())["cr"]:		
+        absPathToWork_l.append("X:\\Data\\Work")
 
     # The 4th path is the path to the "thanaphon" computer.
     if AV_client_id()   == (AV_get_all_client_id())["vattha"]:
@@ -201,6 +208,8 @@ def AV_smb_absPathToWork():
         absPathToWork_l.append("E:\\vattha\\Data\\Work")    
     elif AV_client_id() == (AV_get_all_client_id())["nam"]:
         absPathToWork_l.append("I:\\Data\\Work")
+    elif AV_client_id() == (AV_get_all_client_id())["cr"]:		
+        absPathToWork_l.append("W:\\Data\\Work")        
 
     # The 5th path is the path to the "nam" computer.
     if AV_client_id()   == (AV_get_all_client_id())["vattha"]:
@@ -214,6 +223,21 @@ def AV_smb_absPathToWork():
         absPathToWork_l.append("I:\\Data\\Work")
     elif AV_client_id() == (AV_get_all_client_id())["nam"]:       
         absPathToWork_l.append("H:\\vattha\\Data\\Work")    
+    elif AV_client_id() == (AV_get_all_client_id())["cr"]:		
+        absPathToWork_l.append("V:\\Data\\Work")        
+
+    # The 6th path is the path to the "cr" computer.
+    if AV_client_id()   == (AV_get_all_client_id())["vattha"]:
+        # absPathToWork_l.append("/run/user/1000/gvfs/smb-share:server=192.168.0.152,share=vattha/Data/Work")
+        absPathToWork_l.append("J:\\Data\\Work")
+    elif AV_client_id() == (AV_get_all_client_id())["pre"]:
+        absPathToWork_l.append("J:\\Data\\Work")
+    elif AV_client_id() == (AV_get_all_client_id())["yok"]:
+        absPathToWork_l.append("J:\\Data\\Work")
+    elif AV_client_id() == (AV_get_all_client_id())["thanaphon"]:       
+        absPathToWork_l.append("J:\\Data\\Work")
+    elif AV_client_id() == (AV_get_all_client_id())["nam"]:       
+        absPathToWork_l.append("J:\\vattha\\Data\\Work")    
 
     return absPathToWork_l	
 
