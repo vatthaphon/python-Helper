@@ -58,27 +58,7 @@ def AV_client_id():
 	# return (str(uuid.uuid1(node=None, clock_seq=None))).split("-")[-1]
 	return socket.gethostname()
 
-
-
-        client_id_l = AV_client_id()
-        if      (client_id_l == all_client_id_l["thanaphon"]):
-            drive_l = "e"
-        elif    (client_id_l == all_client_id_l["yok"]):
-            drive_l = "d"
-        elif    (client_id_l == all_client_id_l["nam"]):
-            drive_l = "h"
-        elif    (client_id_l == all_client_id_l["vattha"]):
-            drive_l = "d"
-        elif    (client_id_l == all_client_id_l["pre"]):
-            drive_l = "f"            
-        elif    (client_id_l == all_client_id_l["pre"]):
-            drive_l = "c"            
-        else:
-            print("Unrecognized: " + client_id_l)  
-            exit()   
-
-
-all_client_drive_g	= {"DESKTOP-IBBBUT4": "c", "DESKTOP-0R5N95L": "h", "DESKTOP-M6E1SUQ": "d", "DESKTOP-QFM8ELP": "d", "DESKTOP-G92TU62": "f", "thanaphon": "DESKTOP-AEALRJ5": "e"}
+all_client_drive_g	= {"DESKTOP-IBBBUT4": "c", "DESKTOP-0R5N95L": "h", "DESKTOP-M6E1SUQ": "d", "DESKTOP-QFM8ELP": "d", "DESKTOP-G92TU62": "f", "DESKTOP-AEALRJ5": "e"}
 all_client_id_g 	= {"cr": "DESKTOP-IBBBUT4", "nam": "DESKTOP-0R5N95L", "vattha_mac": "e0f84716a2da", "yok": "DESKTOP-M6E1SUQ", "vattha": "DESKTOP-QFM8ELP", "pre": "DESKTOP-G92TU62", "thanaphon": "DESKTOP-AEALRJ5"}
 all_client_name_g 	= {value:key for key, value in all_client_id_g.items()}
 
@@ -307,7 +287,10 @@ def AV_is_cr():
 		return False  
 
 def AV_get_all_client_id():
-	return all_client_id_g      
+	return all_client_id_g   
+
+def AV_get_all_client_drive():
+	return all_client_drive_g
 
 ################################ Else ################################
 def AV_hasattr(x_p, attr_p):
