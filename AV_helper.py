@@ -501,8 +501,6 @@ def AV_rmse(a_p, b_p):
 	"""
 	return np.sqrt(((a_p - b_p) ** 2).mean())
 
-	
-
 ################################ Memory ################################
 def AV_mem_display_top(snapshot, key_type='lineno', limit=3):
     snapshot = snapshot.filter_traces((
