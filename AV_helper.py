@@ -57,7 +57,7 @@ def AV_client_id():
 	# return (str(uuid.uuid1(node=None, clock_seq=None))).split("-")[-1]
 	return socket.gethostname()
 
-all_client_id_g 	= {"nam": "DESKTOP-0R5N95L", "vattha_mac": "e0f84716a2da", "yok": "DESKTOP-M6E1SUQ", "vattha": "DESKTOP-QFM8ELP", "pre": "DESKTOP-G92TU62", "thanaphon": "DESKTOP-AEALRJ5"}
+all_client_id_g 	= {"cr": "DESKTOP-IBBBUT4", "nam": "DESKTOP-0R5N95L", "vattha_mac": "e0f84716a2da", "yok": "DESKTOP-M6E1SUQ", "vattha": "DESKTOP-QFM8ELP", "pre": "DESKTOP-G92TU62", "thanaphon": "DESKTOP-AEALRJ5"}
 all_client_name_g 	= {value:key for key, value in all_client_id_g.items()}
 
 def AV_client_name():
@@ -112,13 +112,19 @@ elif (client_id_l == all_client_id_g["nam"]):
 	# N_cores_g = 11 		# server free load
 	# # N_cores_g = psutil.cpu_count() - 1
 	pass	
+elif (client_id_l == all_client_id_g["cr"]):
+	# # study: Mon, Tue afternoon, Wed
+
+	# # N_cores_g = 1
+	# # N_cores_g = 4			# server busy load
+	# # N_cores_g = 8
+	# # N_cores_g = 10
+	# N_cores_g = 11 		# server free load
+	# # N_cores_g = psutil.cpu_count() - 1
+	pass	
 else:
 	print("Unrecognized: " + client_id_l)
 	# exit(0)
-
-################################ Else ################################
-def AV_hasattr(x_p, attr_p):
-	return hasattr(x_p, attr_p)
 
 def AV_tag2address(tag_p):
     if "vattha" in tag_p:
@@ -135,6 +141,11 @@ def AV_tag2address(tag_p):
 
     elif "nam" in tag_p: 
         return AV_smb_absPathToWork()[4]
+
+################################ Else ################################
+def AV_hasattr(x_p, attr_p):
+	return hasattr(x_p, attr_p)
+
 
 def AV_isclose(a_p, b_p, rtol_p=1e-05, atol_p=1e-08, equal_nan_p=False):
 	"""
