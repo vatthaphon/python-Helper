@@ -146,7 +146,6 @@ def AV_tag2address(tag_p):
 def AV_hasattr(x_p, attr_p):
 	return hasattr(x_p, attr_p)
 
-
 def AV_isclose(a_p, b_p, rtol_p=1e-05, atol_p=1e-08, equal_nan_p=False):
 	"""
 	Returns a boolean array where two arrays are element-wise equal within a tolerance.
