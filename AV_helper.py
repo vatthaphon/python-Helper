@@ -292,6 +292,43 @@ def AV_get_all_client_id():
 def AV_get_all_client_drive():
 	return all_client_drive_g
 
+def AV_get_N_cores():   
+
+	with open(AV_norm_path(AV_smb_absPathToWork()[0] + "/UtilSrcCode/python-Helper/N_cores_g_profiles"), "rb") as fp:
+		all_clients_N_cores_g = pickle.load(fp)
+		fp.close()
+
+	if AV_is_vattha():
+		print("vattha")
+		N_cores_g = all_clients_N_cores_g["vattha"]
+
+	elif AV_is_vattha_mac():
+		print("vattha_mac")
+		N_cores_g = all_clients_N_cores_g["vattha_mac"]
+
+	elif AV_is_pre():
+		print("pre")
+		N_cores_g = all_clients_N_cores_g["pre"]
+
+	elif AV_is_thanaphon():
+		print("thanaphon")
+		N_cores_g = all_clients_N_cores_g["thanaphon"]
+
+	elif AV_is_yok():
+		print("yok")
+		N_cores_g = all_clients_N_cores_g["yok"]
+
+	elif AV_is_nam():
+		print("nam")
+		N_cores_g = all_clients_N_cores_g["nam"]
+
+	elif AV_is_cr():
+		print("cr")
+		N_cores_g = all_clients_N_cores_g["cr"]
+
+	return N_cores_g
+
+
 ################################ Else ################################
 def AV_hasattr(x_p, attr_p):
 	return hasattr(x_p, attr_p)
@@ -2394,38 +2431,6 @@ def del_job_done(N_cores_p):
 
 	for i_l in range(N_cores_p):
 		AV_delFile("tmp" + str(i_l) + "done")
-
-def AV_get_N_cores():   
-
-	with open(AV_norm_path(AV_smb_absPathToWork()[0] + "/UtilSrcCode/python-Helper/N_cores_g_profiles"), "rb") as fp:
-		all_clients_N_cores_g = pickle.load(fp)
-		fp.close()
-
-	if AV_is_vattha():
-		print("vattha")
-		N_cores_g = all_clients_N_cores_g["vattha"]
-
-	elif AV_is_vattha_mac():
-		print("vattha_mac")
-		N_cores_g = all_clients_N_cores_g["vattha_mac"]
-
-	elif AV_is_pre():
-		print("pre")
-		N_cores_g = all_clients_N_cores_g["pre"]
-
-	elif AV_is_thanaphon():
-		print("thanaphon")
-		N_cores_g = all_clients_N_cores_g["thanaphon"]
-
-	elif AV_is_yok():
-		print("yok")
-		N_cores_g = all_clients_N_cores_g["yok"]
-
-	elif AV_is_nam():
-		print("nam")
-		N_cores_g = all_clients_N_cores_g["nam"]
-
-	return N_cores_g
 
 ################################ Discretize spaces ################################
 def AV_1Dspace(val_begin_p, val_end_p, N_val_p, typeOfSampling_p=0, logspaceBase_p=10.0):
