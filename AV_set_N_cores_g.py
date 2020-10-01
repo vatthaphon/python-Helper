@@ -23,9 +23,9 @@ if __name__ == "__main__":
     all_clients_N_cores_g = {
     "vattha_mac": 1, 
     
-    "yok": 11,
+    # "yok": 11,
     # "yok": 3, 
-    # "yok": 5, 
+    "yok": 5, 
 
     # "vattha": 1, 
     # "vattha": 5, 
@@ -34,8 +34,8 @@ if __name__ == "__main__":
 
     # "pre": 1, 
     # "pre": 3,     
-    # "pre": 5,     
-    "pre": 11, 
+    "pre": 5,     
+    # "pre": 11, 
 
     "nam": 11, 
     # "nam": 5, 
