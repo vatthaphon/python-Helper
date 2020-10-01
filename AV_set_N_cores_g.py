@@ -41,6 +41,10 @@ if __name__ == "__main__":
     # "nam": 5, 
     # "nam": 3,    
 
+    "cr": 11, 
+    # "cr": 5, 
+    # "cr": 3,    
+
     "thanaphon": 11
     # "thanaphon": 5
     # "thanaphon": 3
@@ -54,14 +58,16 @@ if __name__ == "__main__":
 
     ########## We choose which servers are used for ML
     is_used_for_ML = {
-    # "vattha": True, 
-    "vattha": False, 
+    "vattha": True, 
+    # "vattha": False, 
     "pre": True, 
     # "pre": False, 	
     "yok": True, 
     # "yok": False, 
     "nam": True, 
     # "nam": False,     
+    "cr": True, 
+    # "cr": False,         
     "thanaphon": True
     # "thanaphon": False
     }
@@ -135,4 +141,17 @@ if __name__ == "__main__":
             pickle.dump([tmp_l], fp)
             fp.close() 
 
+    if is_used_for_ML["cr"]:
+        AV_delFile(AV_norm_path("D:\\vattha\\Data\\Work\\FIRST\\EEG\\DataResults\\MUSE\\MW\\muse_ml_job_cr_nonactive"))
+
+        with open(AV_norm_path("D:\\vattha\\Data\\Work\\FIRST\\EEG\\DataResults\\MUSE\\MW\\muse_ml_job_cr_active"), "wb+") as fp:
+            pickle.dump([0], fp)
+            fp.close()                
+    else:
+        AV_delFile(AV_norm_path("D:\\vattha\\Data\\Work\\FIRST\\EEG\\DataResults\\MUSE\\MW\\muse_ml_job_cr_active"))
+
+        with open(AV_norm_path("D:\\vattha\\Data\\Work\\FIRST\\EEG\\DataResults\\MUSE\\MW\\muse_ml_job_cr_nonactive"), "wb+") as fp:
+            tmp_l = 0
+            pickle.dump([tmp_l], fp)
+            fp.close() 
 
