@@ -116,33 +116,6 @@ else:
 	print("Unrecognized: " + client_id_l)
 	# exit(0)
 
-################################ Random ################################
-def AV_rand_normal(mean_p, std_p, size_p, seed_p=None):
-	if seed_p is not None:
-		np.random.seed(seed_p)
-
-	return np.random.normal(loc=mean_p, scale=std_p, size=size_p)
-
-def AV_rand_seed(seed_p=0):
-    random.seed(a=seed_p)
-
-def AV_rand_int(N_begin_p, N_end_p, N_samples_p=None, is_allow_duplicate_p=False, seed_p=None):
-	"""
-	We get a N_samples_p random sequence, of which values are N_begin_p <= N <= N_end_p.
-	"""
-	if seed_p is not None:
-		random.seed(a=seed_p)
-
-	if N_samples_p is None:
-		N_samples_l = N_end_p - N_begin_p + 1
-	else:
-		N_samples_l = N_samples_p
-
-	if is_allow_duplicate_p:
-		return np.asarray([random.randint(N_begin_p, N_end_p) for p in range(0, N_samples_l)], dtype=np.int32)
-	else:
-		return np.asarray(random.sample(range(N_begin_p, N_end_p + 1), N_samples_l), dtype=np.int32)
-
 ################################ Else ################################
 def AV_hasattr(x_p, attr_p):
 	return hasattr(x_p, attr_p)
@@ -369,6 +342,33 @@ def AV_getMaxElements(data_p, isDebug_p=False):
 		exit(0)
 
 	return max_val_l, listOfCordinates_l 
+
+################################ Random ################################
+def AV_rand_normal(mean_p, std_p, size_p, seed_p=None):
+	if seed_p is not None:
+		np.random.seed(seed_p)
+
+	return np.random.normal(loc=mean_p, scale=std_p, size=size_p)
+
+def AV_rand_seed(seed_p=0):
+    random.seed(a=seed_p)
+
+def AV_rand_int(N_begin_p, N_end_p, N_samples_p=None, is_allow_duplicate_p=False, seed_p=None):
+	"""
+	We get a N_samples_p random sequence, of which values are N_begin_p <= N <= N_end_p.
+	"""
+	if seed_p is not None:
+		random.seed(a=seed_p)
+
+	if N_samples_p is None:
+		N_samples_l = N_end_p - N_begin_p + 1
+	else:
+		N_samples_l = N_samples_p
+
+	if is_allow_duplicate_p:
+		return np.asarray([random.randint(N_begin_p, N_end_p) for p in range(0, N_samples_l)], dtype=np.int32)
+	else:
+		return np.asarray(random.sample(range(N_begin_p, N_end_p + 1), N_samples_l), dtype=np.int32)
 
 ################################ Metrics ################################
 def AV_sse(a_p, b_p):
