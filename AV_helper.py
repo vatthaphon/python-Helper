@@ -237,7 +237,9 @@ def AV_smb_absPathToWork():
     elif AV_client_id() == (AV_get_all_client_id())["thanaphon"]:       
         absPathToWork_l.append("J:\\Data\\Work")
     elif AV_client_id() == (AV_get_all_client_id())["nam"]:       
-        absPathToWork_l.append("J:\\vattha\\Data\\Work")    
+        absPathToWork_l.append("J:\\Data\\Work")    
+    elif AV_client_id() == (AV_get_all_client_id())["cr"]:		
+        absPathToWork_l.append("C:\\vattha\\Data\\Work")    
 
     return absPathToWork_l	
 
