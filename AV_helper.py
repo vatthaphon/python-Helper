@@ -143,6 +143,9 @@ def AV_tag2address(tag_p):
     elif "nam" in tag_p: 
         return AV_smb_absPathToWork()[4]
 
+    elif "cr" in tag_p: 
+        return AV_smb_absPathToWork()[5]
+
 def AV_smb_absPathToWork():
 
     absPathToWork_l = []
