@@ -279,6 +279,12 @@ def AV_is_nam():
 	else:
 		return False        
 
+def AV_is_cr():
+	if AV_client_id() == (AV_get_all_client_id())["cr"]:
+		return True
+	else:
+		return False        
+
 ################################ Else ################################
 def AV_hasattr(x_p, attr_p):
 	return hasattr(x_p, attr_p)
