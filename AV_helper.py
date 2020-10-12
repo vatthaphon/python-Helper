@@ -1331,7 +1331,11 @@ def AV_plot_line_ConfInt(axe_p, x_p, y_p, yerr_p, label_p=None, color_p="b", lin
 
 def AV_plot_line_errorbar(axe_p, x_p, y_p, yerr_p, xerr_p, color_p="b", label_p=None, capsize_length_p=5, capsize_thick_p=3, linewidth_p=5, alpha_p=0.5):
 
-	axe_p.errorbar(x=x_p, y=y_p, yerr=yerr_p, capsize=capsize_length_p, mfc=color_p, label=label_p, linewidth=linewidth_p, markeredgewidth=capsize_thick_p, alpha=alpha_p)
+	# axe_p.errorbar(x=x_p, y=y_p, yerr=yerr_p, capsize=capsize_length_p, mfc=color_p, label=label_p, linewidth=linewidth_p, markeredgewidth=capsize_thick_p, alpha=alpha_p)
+	axe_p.errorbar(x=x_p, y=y_p, yerr=yerr_p, capsize=capsize_length_p, ecolor=color_p, label=label_p, linewidth=linewidth_p, markeredgewidth=capsize_thick_p, alpha=alpha_p)
+
+
+
 
 def AV_plot_scatter(\
     x_p, y_p, \
