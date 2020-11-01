@@ -1329,7 +1329,7 @@ def AV_plot_line_ConfInt(axe_p, x_p, y_p, yerr_p, label_p=None, color_p="b", lin
 	axe_p.fill_between(x_p, y_p - yerr_p, y_p + yerr_p, alpha=alpha_p, color=color_p)
 
 
-def AV_plot_line_errorbar(axe_p, x_p, y_p, yerr_p, xerr_p, color_p="b", bar_color_p=None, label_p=None, capsize_length_p=5, capsize_thick_p=3, linewidth_p=5, alpha_p=0.5):
+def AV_plot_line_errorbar(axe_p, x_p, y_p, yerr_p, xerr_p, color_p=None, bar_color_p=None, label_p=None, capsize_length_p=5, capsize_thick_p=3, linewidth_p=5, alpha_p=0.5):
 
 	if bar_color_p is None:
 		bar_color_p = color_p
