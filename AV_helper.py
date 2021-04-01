@@ -58,8 +58,8 @@ def AV_client_id():
 	# return (str(uuid.uuid1(node=None, clock_seq=None))).split("-")[-1]
 	return socket.gethostname()
 
-all_client_drive_g	= {"DESKTOP-IBBBUT4": "c", "DESKTOP-0R5N95L": "h", "DESKTOP-M6E1SUQ": "d", "DESKTOP-QFM8ELP": "d", "DESKTOP-G92TU62": "f", "DESKTOP-AEALRJ5": "e"}
-all_client_id_g 	= {"cr": "DESKTOP-IBBBUT4", "nam": "DESKTOP-0R5N95L", "vattha_mac": "e0f84716a2da", "yok": "DESKTOP-M6E1SUQ", "vattha": "DESKTOP-QFM8ELP", "pre": "DESKTOP-G92TU62", "thanaphon": "DESKTOP-AEALRJ5"}
+all_client_drive_g	= {"DESKTOP-IBBBUT4": "c", "DESKTOP-0R5N95L": "h", "DESKTOP-SSDDIFN": "d", "DESKTOP-QFM8ELP": "d", "DESKTOP-G92TU62": "f", "DESKTOP-AEALRJ5": "e"}
+all_client_id_g 	= {"cr": "DESKTOP-IBBBUT4", "nam": "DESKTOP-0R5N95L", "vattha_mac": "e0f84716a2da", "yok": "DESKTOP-SSDDIFN", "vattha": "DESKTOP-QFM8ELP", "pre": "DESKTOP-G92TU62", "thanaphon": "DESKTOP-AEALRJ5"}
 all_client_name_g 	= {value:key for key, value in all_client_id_g.items()}
 
 def AV_client_name():
