@@ -784,6 +784,9 @@ def AV_interp1d(x_p, y_p, new_x_p):
 	return f_l(new_x_p)
 
 def AV_print_colored_txt(txt_p, color_p="y"):
+	"""
+	Use this function by print(AV_print_colored_txt(txt_p, color_p="y"))
+	"""
 
 	if color_p == "m":
 		header_l = Fore.MAGENTA
