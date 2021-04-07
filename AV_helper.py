@@ -330,6 +330,22 @@ def AV_get_N_cores():
 
 
 ################################ Else ################################
+def AV_local_max(x_p):
+    """
+    Get local maxima of 1D-array
+
+    Args:
+        x_p	: numpy 1D-array
+    Returns:
+        m	: list, 1D-indices of local maxima
+    """
+
+    dx_l 	= np.diff(x_p) # discrete 1st derivative
+    zc_l 	= np.diff(np.sign(dx_l)) # zero-crossings of dx_l
+    m_l 	= 1 + np.where(zc_l == -2)[0] # indices of local max.
+
+    return m_l
+
 def AV_hasattr(x_p, attr_p):
 	return hasattr(x_p, attr_p)
 
