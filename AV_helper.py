@@ -2522,14 +2522,6 @@ def AV_1Dspace(val_begin_p, val_end_p, N_val_p, typeOfSampling_p=0, logspaceBase
     else:
         pass
 
-def AV_1Dspace_step(val_begin_p, val_end_p, step_p):
-	"""
-	Like np.linspace but uses step instead of num
-	This is inclusive to stop, so if start=1, stop=3, step=0.5
-	Output is: array([1., 1.5, 2., 2.5, 3.])
-	"""
-	return np.linspace(val_begin_p, val_end_p, int((val_end_p - val_begin_p) / step_p + 1))	
-
 ################################ Test functions ################################
 def test_AV_plot_multiset_stackedbar():
 
