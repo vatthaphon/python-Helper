@@ -2522,7 +2522,21 @@ def AV_1Dspace(val_begin_p, val_end_p, N_val_p, typeOfSampling_p=0, logspaceBase
     else:
         pass
 
-def AV_1Dspace_step()
+def AV_1Dspace_step(val_begin_p, val_end_p, step_p):
+
+	d_l = val_end_p - val_begin_p
+
+	if np.allclose(d_l % step_p, 0.0):
+		N_l = int(d_l / step_p) + 1
+
+	else:
+		tmp_N_l = np.floor(d_l / step_p)
+
+		N_l = int(tmp_N_l) + 1
+
+	return AV_1Dspace(val_begin_p, val_end_p, N_l, typeOfSampling_p=0)
+
+
 ################################ Test functions ################################
 def test_AV_plot_multiset_stackedbar():
 
