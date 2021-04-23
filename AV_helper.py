@@ -2522,6 +2522,7 @@ def AV_1Dspace(val_begin_p, val_end_p, N_val_p, typeOfSampling_p=0, logspaceBase
     else:
         pass
 
+def AV_1Dspace_step()
 ################################ Test functions ################################
 def test_AV_plot_multiset_stackedbar():
 
