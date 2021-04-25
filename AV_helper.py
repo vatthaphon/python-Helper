@@ -2522,7 +2522,7 @@ def AV_1Dspace(val_begin_p, val_end_p, N_val_p, typeOfSampling_p=0, logspaceBase
     else:
         pass
 
-def AV_1Dspace_step(val_begin_p, val_end_p, step_p):
+def AV_1Dspace_step(val_begin_p, val_end_p, step_p=1.0):
 
   d_l = val_end_p - val_begin_p
 
