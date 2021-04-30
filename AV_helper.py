@@ -710,15 +710,15 @@ def AV_flatten(A_p, axis_begin_p=0, axis_end_p=None):
 def AV_flatten_EEG(A_p):
 	"""
 	Params:
-		A_p				: [Times, Channels]
+		A_p				: [Times, Trials]
 	"""
 
 	return A_p.flatten("F")
 
-def AV_restore_EEG(a_p, N_times_l, N_chns_l)
+def AV_restore_EEG(a_p, N_times_l, N_trials_l)
 	"""
 	Params:
-		a_p	: [N_times_l X N_chns_l]
+		a_p	: [N_times_l X N_trials_l]
 	"""
 
 def AV_iscontainNaN(A_p):
