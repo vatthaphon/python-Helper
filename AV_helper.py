@@ -713,18 +713,7 @@ def AV_EEG_flatten(A_p):
 		A_p				: [Times X Channels]
 	"""
 
-	if axis_end_p is not None:
-		if A_p.ndim == (axis_end_p + 1):
-			axis_end_p = None
-
-	if axis_end_p is None:
-		return A_p.reshape(*A_p.shape[:axis_begin_p], -1)
-	else:
-		assert axis_begin_p <= axis_end_p
-
-		end_l = (axis_end_p + 1) - A_p.ndim
-	
-		return A_p.reshape(*A_p.shape[:axis_begin_p], -1, *A_p.shape[end_l:])
+	return A_p.flatten("F")
 
 def AV_iscontainNaN(A_p):
 	if np.isnan(A_p).any():
