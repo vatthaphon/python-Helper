@@ -709,6 +709,8 @@ def AV_flatten(A_p, axis_begin_p=0, axis_end_p=None):
 
 def AV_flatten_EEG(A_p):
 	"""
+	Use with AV_restore_EEG()
+	
 	Params:
 		A_p	: [Times, Trials]
 	"""
@@ -718,7 +720,7 @@ def AV_flatten_EEG(A_p):
 def AV_restore_EEG(a_p, N_times_l, N_trials_l):
 	"""
 	Use with AV_flatten_EEG()
-	
+
 	Params:
 		a_p	: [N_times_l X N_trials_l]
 	"""
