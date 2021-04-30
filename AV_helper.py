@@ -707,7 +707,7 @@ def AV_flatten(A_p, axis_begin_p=0, axis_end_p=None):
 	
 		return A_p.reshape(*A_p.shape[:axis_begin_p], -1, *A_p.shape[end_l:])
 
-def AV_EEG_flatten(A_p):
+def AV_flatten_EEG(A_p):
 	"""
 	Params:
 		A_p				: [Times X Channels]
