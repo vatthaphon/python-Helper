@@ -718,7 +718,7 @@ def AV_flatten_EEG(A_p):
 def AV_restore_EEG(a_p, N_times_l, N_trials_l, N_chns_l=None):
 	"""
 	Params:
-		a_p	: [N_times_l X N_trials_l] or [N_chns_l X N_times_l X N_trials_l]
+		a_p	: [N_times_l X N_trials_l]
 	"""
 
 	pass
