@@ -710,7 +710,7 @@ def AV_flatten(A_p, axis_begin_p=0, axis_end_p=None):
 def AV_flatten_EEG(A_p):
 	"""
 	Params:
-		A_p				: [Times, Trials]
+		A_p				: [Times, Trials] or [Channels, Times, Trials]
 	"""
 
 	return A_p.flatten("F")
