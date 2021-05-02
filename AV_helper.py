@@ -715,6 +715,8 @@ def AV_flatten_EEG(A_p):
 		A_p	: [Times, Trials]
 	"""
 
+# Reflet each trial and concatenate
+
 	return A_p.flatten("F")
 
 def AV_restore_EEG(a_p, N_times_l, N_trials_l):
