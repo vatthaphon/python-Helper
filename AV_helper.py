@@ -726,6 +726,8 @@ def AV_flatten_EEG(A_p):
 	print(A_p[-2, 10], "==", tmp[1, 10])
 	print(A_p[-2, 10], "==", tmp[int(2*48000) - 2, 10])
 
+	print(np.allclose( np.flip(tmp[0:48000, 20]), A_p[:, 20]))
+
 	exit()
 
 	return A_p.flatten("F")
