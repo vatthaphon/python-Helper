@@ -731,7 +731,8 @@ def AV_restore_EEG(a_p, N_times_l, N_trials_l):
 
 	tmp_l = np.reshape(a_p, (int(N_times_l*3), N_trials_l), order='F')
 
-	return np.reshape(a_p, (N_times_l, N_trials_l), order='F')
+	return tmp_l[N_times_l:int(2*N_times_l), :]
+
 
 def AV_iscontainNaN(A_p):
 	if np.isnan(A_p).any():
