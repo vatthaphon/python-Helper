@@ -716,6 +716,9 @@ def AV_flatten_EEG(A_p):
 	"""
 
 # Reflet each trial and concatenate
+	flipped_A_l = np.flip(A_p, axis=1)
+
+	print(A_p[10, 0], "=", flipped_A_l[10, -1])
 
 	return A_p.flatten("F")
 
