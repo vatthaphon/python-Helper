@@ -720,6 +720,8 @@ def AV_flatten_EEG(A_p):
 
 	print(A_p[10, 0], "=", flipped_A_l[10, -1])
 
+	exit()
+
 	return A_p.flatten("F")
 
 def AV_restore_EEG(a_p, N_times_l, N_trials_l):
