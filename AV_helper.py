@@ -722,7 +722,8 @@ def AV_flatten_EEG(A_p):
 	print(np.shape(A_p))
 	print(np.shape(tmp))
 
-	print(tmp[48000, 10])
+	print(A_p[0, 10])
+	print(tmp[48000 - 1, 10])
 
 	exit()
 
