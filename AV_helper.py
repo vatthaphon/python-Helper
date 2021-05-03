@@ -715,7 +715,6 @@ def AV_flatten_EEG(A_p):
 		A_p	: [Times, Trials]
 	"""
 
-# Reflet each trial and concatenate
 	flipped_A_l = np.flip(A_p, axis=0)
 
 	tmp = AV_axisX_concat( (flipped_A_l, A_p, flipped_A_l) , axis_p=0)
