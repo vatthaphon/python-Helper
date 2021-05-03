@@ -717,20 +717,9 @@ def AV_flatten_EEG(A_p):
 
 	flipped_A_l = np.flip(A_p, axis=0)
 
-	tmp = AV_axisX_concat( (flipped_A_l, A_p, flipped_A_l) , axis_p=0)
+	tmp_l = AV_axisX_concat( (flipped_A_l, A_p, flipped_A_l) , axis_p=0)
 
-	print(np.shape(A_p))
-	print(np.shape(tmp))
-
-	print(A_p[0 + 1, 10], "==", tmp[48000 - 2, 10])
-	print(A_p[-2, 10], "==", tmp[1, 10])
-	print(A_p[-2, 10], "==", tmp[int(2*48000) - 2, 10])
-
-	print(np.allclose( np.flip(tmp[0:48000, 20]), A_p[:, 20]))
-
-	exit()
-
-	return A_p.flatten("F")
+	return tmp_l.flatten("F")
 
 def AV_restore_EEG(a_p, N_times_l, N_trials_l):
 	"""
