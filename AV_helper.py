@@ -2539,8 +2539,6 @@ def del_job_done(N_cores_p):
 
 ################################ Discretize spaces ################################
 def AV_1Dspace(val_begin_p, val_end_p, N_val_p=None, typeOfSampling_p=0, logspaceBase_p=10.0):
-	if N_val_p is None:
-		N_val_p = 1
 
     if (typeOfSampling_p == 0):
         return np.linspace(val_begin_p, val_end_p, N_val_p)        
