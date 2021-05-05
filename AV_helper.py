@@ -733,10 +733,8 @@ def AV_restore_EEG(a_p, N_times_l, N_trials_l):
 
 
 def AV_iscontainNaN(A_p):
-	if np.isnan(A_p).any():
-		return True
-	else:
-		return False
+	
+	return np.isnan(A_p).any()
 
 def AV_swapaxes(a_p, i_axis1_p, i_axis2_p):
     new_a_p = copy.deepcopy(a_p)
