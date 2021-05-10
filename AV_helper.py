@@ -841,9 +841,8 @@ def AV_append_to_excel(FN_p, new_rows_p, sheet_name='Sheet1'):
 
 	import openpyxl
 
-	from openpyxl import Workbook
-
-	wb_l = Workbook()
+	wb_l = openpyxl.Workbook()
+	
 	if not AV_isFileExist(FN_p):		
 		wb_l.create_sheet(sheet_name)
 		wb_l.save(filename=FN_p)
@@ -852,14 +851,14 @@ def AV_append_to_excel(FN_p, new_rows_p, sheet_name='Sheet1'):
 	print(sheet1)
 	exit()
 
-	wb = openpyxl.load_workbook(filename=FN_p)
-	ws = wb[sheet_name]
+	wb_l = openpyxl.load_workbook(filename=FN_p)
+	ws = wb_l[sheet_name]
 	row = ws.get_highest_row() + 1
 
 	for col, entry in enumerate(new_row_p, start=1):
 		ws.cell(row=row, column=col, value=entry)
 
-	wb.save(FN_p)
+	wb_l.save(FN_p)
 
 def AV_is_numpy_ndarray(arr_p):
 # Is it a numpy array?
