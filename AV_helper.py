@@ -841,6 +841,13 @@ def AV_append_to_excel(FN_p, new_rows_p, sheet_name='Sheet1'):
 
 	import openpyxl
 
+	from openpyxl import Workbook
+
+	if not AV_isFileExist(FN_p):
+
+		workbook = Workbook()
+		workbook.save(filename=FN_p)
+
 	wb = openpyxl.load_workbook(filename=FN_p)
 	ws = wb[sheet_name]
 	row = ws.get_highest_row() + 1
