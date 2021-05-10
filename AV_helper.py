@@ -837,22 +837,21 @@ def AV_dsearchn(pool_p, what2look_p):
 	return np.asarray(what2look_idx_l)	
 
 ################################ Check and convert Data type ################################
-def AV_append_to_excel(FN_p, new_rows_p, sheet_name='Sheet1'):
+def AV_append_to_excel(FN_p, new_rows_p, sheet_name_p='Sheet1'):
 
 	import openpyxl
 
 	wb_l = openpyxl.Workbook()
 
 	if not AV_isFileExist(FN_p):		
-		wb_l.create_sheet(sheet_name)
+		wb_l.create_sheet(sheet_name_p)
 		wb_l.save(filename=FN_p)
 
-	sheet1_l = wb_l["January"]
-	print(sheet1)
-	exit()
+	if not (sheet_name_p in wb_l.sheetnames):
+		wb_l.create_sheet(sheet_name_p)
 
 	wb_l = openpyxl.load_workbook(filename=FN_p)
-	ws_l = wb_l[sheet_name]
+	ws_l = wb_l[sheet_name_p]
 	row_l = ws_l.get_highest_row() + 1
 
 	for col, entry in enumerate(new_row_p, start=1):
