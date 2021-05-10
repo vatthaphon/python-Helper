@@ -865,6 +865,9 @@ def AV_2DListToPandaDataFrame(data_p, col_labels_p=None, row_labels_p=None):
 	if col_labels_p is not None:
 		df_l.columns = col_labels_p
 
+	if row_labels_p is not None:
+		df_l.index = row_labels_p
+
 	return df_l
 
 def AV_pandas_select_rows(data_p, col_val_pairs_p):
