@@ -910,6 +910,8 @@ def AV_pandas_append_df_to_excel(filename, df, sheet_name='Sheet1', startrow=Non
 
     (c) [MaxU](https://stackoverflow.com/users/5741205/maxu?tab=profile)
     """
+    from openpyxl import load_workbook
+
     # Excel file doesn't exist - saving and exiting
     if not os.path.isfile(filename):
         df.to_excel(
