@@ -846,7 +846,7 @@ def AV_append_to_excel(FN_p, new_rows_p, sheet_name='Sheet1'):
 	row = ws.get_highest_row() + 1
 
 	for col, entry in enumerate(new_row_p, start=1):
-	    ws.cell(row=row, column=col, value=entry)
+		ws.cell(row=row, column=col, value=entry)
 
 	wb.save(FN_p)
 
