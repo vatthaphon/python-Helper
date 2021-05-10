@@ -843,14 +843,12 @@ def AV_append_to_excel(FN_p, new_rows_p, sheet_name='Sheet1'):
 
 	from openpyxl import Workbook
 
-	workbook = Workbook()
-	if not AV_isFileExist(FN_p):
+	wb_l = Workbook()
+	if not AV_isFileExist(FN_p):		
+		wb_l.create_sheet(sheet_name)
+		wb_l.save(filename=FN_p)
 
-		
-		workbook.create_sheet(sheet_name)
-		workbook.save(filename=FN_p)
-
-	sheet1 = workbook.get_sheet_by_name("January")
+	sheet1_l = wb_l.get_sheet_by_name("January")
 	print(sheet1)
 	exit()
 
