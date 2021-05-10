@@ -863,6 +863,12 @@ def AV_2DListToPandaDataFrame(data_p, col_labels_p=None):
 
 	return df_l
 
+def AV_pandas_select_rows(data_p, col_val_pairs_p):
+	"""
+	Params:
+		data_p			: Pandas Dataframe
+		col_val_pairs_p	: A dictionary containing columns as keys and values as conditions.
+	"""
 
 ################################ Convertor ################################
 def AV_interp1d(x_p, y_p, new_x_p):
