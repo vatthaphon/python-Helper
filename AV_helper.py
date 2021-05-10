@@ -869,6 +869,10 @@ def AV_pandas_select_rows(data_p, col_val_pairs_p):
 		data_p			: Pandas Dataframe
 		col_val_pairs_p	: A dictionary containing columns as keys and values as conditions.
 	"""
+	for key_l, val_l in col_val_pairs_p.items():
+		print(key_l, ":", val_l)
+
+
 
 ################################ Convertor ################################
 def AV_interp1d(x_p, y_p, new_x_p):
