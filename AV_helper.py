@@ -847,7 +847,7 @@ def AV_append_to_excel(FN_p, new_rows_p, sheet_name='Sheet1'):
 		wb_l.create_sheet(sheet_name)
 		wb_l.save(filename=FN_p)
 
-	sheet1_l = wb_l.get_sheet_by_name("January")
+	sheet1_l = wb_l["January"]
 	print(sheet1)
 	exit()
 
