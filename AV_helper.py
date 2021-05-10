@@ -846,6 +846,7 @@ def AV_append_to_excel(FN_p, new_rows_p, sheet_name='Sheet1'):
 	if not AV_isFileExist(FN_p):
 
 		workbook = Workbook()
+		workbook.create_sheet(sheet_name)
 		workbook.save(filename=FN_p)
 
 	wb = openpyxl.load_workbook(filename=FN_p)
