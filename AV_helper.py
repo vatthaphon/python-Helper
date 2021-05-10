@@ -849,6 +849,10 @@ def AV_append_to_excel(FN_p, new_rows_p, sheet_name='Sheet1'):
 		workbook.create_sheet(sheet_name)
 		workbook.save(filename=FN_p)
 
+	sheet1 = book.get_sheet_by_name("January")
+	print(sheet1)
+	exit()
+
 	wb = openpyxl.load_workbook(filename=FN_p)
 	ws = wb[sheet_name]
 	row = ws.get_highest_row() + 1
