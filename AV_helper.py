@@ -842,7 +842,7 @@ def AV_append_to_excel(FN_p, new_rows_p, sheet_name='Sheet1'):
 	import openpyxl
 
 	wb_l = openpyxl.Workbook()
-	
+
 	if not AV_isFileExist(FN_p):		
 		wb_l.create_sheet(sheet_name)
 		wb_l.save(filename=FN_p)
@@ -852,11 +852,11 @@ def AV_append_to_excel(FN_p, new_rows_p, sheet_name='Sheet1'):
 	exit()
 
 	wb_l = openpyxl.load_workbook(filename=FN_p)
-	ws = wb_l[sheet_name]
-	row = ws.get_highest_row() + 1
+	ws_l = wb_l[sheet_name]
+	row_l = ws_l.get_highest_row() + 1
 
 	for col, entry in enumerate(new_row_p, start=1):
-		ws.cell(row=row, column=col, value=entry)
+		ws_l.cell(row=row_l, column=col, value=entry)
 
 	wb_l.save(FN_p)
 
