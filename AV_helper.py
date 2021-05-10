@@ -837,6 +837,19 @@ def AV_dsearchn(pool_p, what2look_p):
 	return np.asarray(what2look_idx_l)	
 
 ################################ Check and convert Data type ################################
+def AV_append_to_excel(FN_p, new_rows_p, sheet_name='Sheet1'):
+
+	import openpyxl
+
+	wb = openpyxl.load_workbook(filename=FN_p)
+	ws = wb[sheet_name]
+	row = ws.get_highest_row() + 1
+
+	for col, entry in enumerate(new_row_p, start=1):
+	    ws.cell(row=row, column=col, value=entry)
+
+	wb.save(FN_p)
+
 def AV_is_numpy_ndarray(arr_p):
 # Is it a numpy array?
 	return isinstance(arr_p, np.ndarray)
