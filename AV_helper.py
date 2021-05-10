@@ -849,14 +849,18 @@ def AV_is_panda_series(arr_p):
 # Is it a list?
 	return isinstance(arr_p, pd.core.series.Series)
 
-def AV_2DListToPandaDataFrame(data_p, col_labels_p=None):
+def AV_2DListToPandaDataFrame(data_p, col_labels_p=None, row_labels_p=None):
 	"""
 	Params:
 	data_p		: np.shape(data_p) == (N_observations, N_groups)
 	col_labels_p: For example, col_labels_p == ['Heading1', 'Heading2'] 
+	row_labels_p: For example, row_labels_p == ['Row1', 'Row2'] 
 	"""
 
-	df_l = pd.DataFrame(data_p)
+	if row_labels_p is None:
+		df_l = pd.DataFrame(data_p)
+	else:
+		df_l = pd.DataFrame(data_p, index=row_labels_p)
 
 	if col_labels_p is not None:
 		df_l.columns = col_labels_p
