@@ -1118,7 +1118,6 @@ def AV_recursived_dir(abs_path_p, type_p=0):
 
     return results_l
 
-
 def AV_spss_read(FN_p):
     """
     Each parsing function returns a metadata object in addition to a pandas dataframe. That object contains the following fields:
