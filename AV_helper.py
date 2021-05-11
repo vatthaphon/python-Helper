@@ -1165,7 +1165,13 @@ def AV_spss_read(FN_p):
 
     return df_l, column_names_l, column_names_to_labels_l, variable_value_labels_l
 
+def AV_csv_read(FN_p):
 
+	import pandas as pd
+
+	df_l = pd.read_csv(FN_p)
+
+	return df_l
 
 ################################ Brain constant ################################
 def AV_N_freq_for_Morlet(): # Not all source codes are updated to the new function of retriving the number frequency of Morlet
