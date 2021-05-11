@@ -853,11 +853,20 @@ def AV_append_to_excel(FN_p, new_rows_p, sheet_name_p='Sheet1'):
 	wb_l = openpyxl.load_workbook(filename=FN_p)
 	ws_l = wb_l[sheet_name_p]
 	row_l = ws_l.max_row + 1
-	
+
 	for col, entry in enumerate(new_rows_p, start=1):
 		ws_l.cell(row=row_l, column=col, value=entry)
 
 	wb_l.save(FN_p)
+
+def AV_is_numeric(arr_p):
+
+	try:
+		arr_p.astype(float)
+
+		return True
+	except:
+		return False
 
 def AV_is_numpy_ndarray(arr_p):
 # Is it a numpy array?
