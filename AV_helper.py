@@ -1173,6 +1173,12 @@ def AV_csv_read(FN_p):
 
 	return df_l
 
+def AV_xlsx_read(FN_p, sheet_name="Sheet1")
+
+    df_l = pd.read_excel(FN_p, sheet_name="การตอบแบบฟอร์ม 1", engine="openpyxl")
+
+    return df_l
+
 ################################ Brain constant ################################
 def AV_N_freq_for_Morlet(): # Not all source codes are updated to the new function of retriving the number frequency of Morlet
 	return 50
