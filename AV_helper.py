@@ -850,6 +850,17 @@ def AV_rpy2_PDDataF_to_RDataF(data_p):
 		data_p	: Pandas Dataframe
 	"""
 
+	import rpy2.robjects as ro
+	from rpy2.robjects.packages import importr
+	from rpy2.robjects import pandas2ri
+
+	from rpy2.robjects.conversion import localconverter	
+
+	with localconverter(ro.default_converter + pandas2ri.converter):
+  		r_from_pd_df = ro.conversion.py2rpy(pd_df)
+
+	return r_from_pd_df
+
 def AV_append_to_excel(FN_p, new_rows_p, sheet_name_p='Sheet1'):
 
 	import openpyxl
