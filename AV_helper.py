@@ -847,7 +847,10 @@ def AV_rpy2_to_StrVector(data_p):
 def AV_rpy2_PDDataF_to_RDataF(data_p):
 	"""
 	Params:
-		data_p	: Pandas Dataframe
+		data_p	: Pandas Dataframe, [N_observations, N_items]
+
+	Return:
+		r_from_pd_df_l	: R Dataframe, [N_items, N_observations]
 	"""
 
 	import rpy2.robjects as ro
