@@ -837,6 +837,13 @@ def AV_dsearchn(pool_p, what2look_p):
 	return np.asarray(what2look_idx_l)	
 
 ################################ Check and convert Data type ################################
+def AV_rpy2_to_StrVector(data_p):
+	"""
+	Params:
+		data_p	: A list of string
+	"""
+	pass
+
 def AV_append_to_excel(FN_p, new_rows_p, sheet_name_p='Sheet1'):
 
 	import openpyxl
