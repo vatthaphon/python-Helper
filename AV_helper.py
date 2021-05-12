@@ -853,7 +853,6 @@ def AV_rpy2_PDDataF_to_RDataF(data_p):
 	import rpy2.robjects as ro
 	from rpy2.robjects.packages import importr
 	from rpy2.robjects import pandas2ri
-
 	from rpy2.robjects.conversion import localconverter	
 
 	with localconverter(ro.default_converter + pandas2ri.converter):
@@ -866,6 +865,11 @@ def AV_rpy2_RDataF_to_PDDataF(data_p):
 	Params:
 		data_p	: R Dataframe
 	"""
+
+	import rpy2.robjects as ro
+	from rpy2.robjects.packages import importr
+	from rpy2.robjects import pandas2ri
+	from rpy2.robjects.conversion import localconverter	
 
 	with localconverter(ro.default_converter + pandas2ri.converter):
 		pd_from_r_df_l = ro.conversion.rpy2py(data_p)
