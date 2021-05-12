@@ -844,6 +844,12 @@ def AV_rpy2_to_StrVector(data_p):
 	"""
 	pass
 
+def AV_rpy2_PDDataF_to_RDataF(data_p):
+	"""
+	Params:
+		data_p	: Pandas Dataframe
+	"""
+
 def AV_append_to_excel(FN_p, new_rows_p, sheet_name_p='Sheet1'):
 
 	import openpyxl
