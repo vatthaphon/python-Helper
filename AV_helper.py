@@ -857,7 +857,7 @@ def AV_rpy2_PDDataF_to_RDataF(data_p):
 	from rpy2.robjects.conversion import localconverter	
 
 	with localconverter(ro.default_converter + pandas2ri.converter):
-  		r_from_pd_df = ro.conversion.py2rpy(pd_df)
+  		r_from_pd_df = ro.conversion.py2rpy(data_p)
 
 	return r_from_pd_df
 
