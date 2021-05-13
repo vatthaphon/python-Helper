@@ -923,7 +923,7 @@ def AV_is_panda_series(arr_p):
 # Is it a list?
 	return isinstance(arr_p, pd.core.series.Series)
 
-def AV_PDDataf_info(data_p, col_labels_p=None, ci_p=0.95, isShowFig_p=False):
+def AV_PDDataf_info(data_p):
 	"""
 	Params:
 		data_p	: [N_observations, N_items], Panda Dataframe.
