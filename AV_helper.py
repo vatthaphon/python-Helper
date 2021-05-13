@@ -845,7 +845,7 @@ def AV_rpy2_to_StrVector(data_p):
 	
 	from rpy2 import robjects
 
-	return robjects.vectors.StrVector(obj)
+	return robjects.vectors.StrVector(data_p)
 
 
 def AV_rpy2_PDDataF_to_RDataF(data_p):
