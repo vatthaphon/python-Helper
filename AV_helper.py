@@ -866,7 +866,7 @@ def AV_rpy2_PDDataF_to_RDataF(data_p):
 def AV_rpy2_RDataF_to_PDDataF(data_p):
 	"""
 	Params:
-		data_p	: R Dataframe
+		data_p	: R Dataframe, [N_items, N_observations]
 	"""
 
 	import rpy2.robjects as ro
@@ -922,6 +922,14 @@ def AV_is_list(arr_p):
 def AV_is_panda_series(arr_p):
 # Is it a list?
 	return isinstance(arr_p, pd.core.series.Series)
+
+def AV_PDDataf_info(data_p, col_labels_p=None, ci_p=0.95, isShowFig_p=False):
+	"""
+	Params:
+		data_p	: [N_observations, N_items], Panda Dataframe.
+	"""
+
+	print(data_p.info())
 
 def AV_2DListToPandaDataFrame(data_p, col_labels_p=None, row_labels_p=None):
 	"""
