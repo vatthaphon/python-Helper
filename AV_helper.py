@@ -842,7 +842,11 @@ def AV_rpy2_to_StrVector(data_p):
 	Params:
 		data_p	: A list of string
 	"""
-	pass
+	
+	from rpy2 import robjects
+
+	return robjects.vectors.StrVector(obj)
+
 
 def AV_rpy2_PDDataF_to_RDataF(data_p):
 	"""
