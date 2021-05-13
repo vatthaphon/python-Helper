@@ -929,7 +929,7 @@ def AV_PDDataf_info(data_p):
 		data_p	: [N_observations, N_items], Panda Dataframe.
 	"""
 
-	print(data_p.info())
+	return data_p.info()
 
 def AV_2DListToPandaDataFrame(data_p, col_labels_p=None, row_labels_p=None):
 	"""
