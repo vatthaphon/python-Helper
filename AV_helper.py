@@ -685,7 +685,7 @@ def AV_pairwise_product(a_p, b_p):
 		r_l : 	[[a0*b0  a0*b1 ... a0*bN ]
  				[a1*b0    .
  				[ ...          .
- 				[aM*b0            aM*bN ]]
+ 				[aM*b0            aM*bN ]]. [M, N]
 	"""
 
 	return np.outer(a_p, b_p)
@@ -700,7 +700,7 @@ def AV_pairwise_add(a_p, b_p):
 		r_l : 	[[a0+b0  a0+b1 ... a0+bN ]
  				[a1+b0    .
  				[ ...          .
- 				[aM+b0            aM+bN ]]
+ 				[aM+b0            aM+bN ]]. [M, N]
 	"""
 
 	return np.add.outer(a_p, b_p)	
@@ -715,7 +715,7 @@ def AV_pairwise_minus(a_p, b_p):
 		r_l : 	[[a0-b0  a0-b1 ... a0-bN ]
  				[a1-b0    .
  				[ ...          .
- 				[aM-b0            aM-bN ]]
+ 				[aM-b0            aM-bN ]]. [M, N]
 	"""
 
 	return np.add.outer(a_p, -b_p)	
