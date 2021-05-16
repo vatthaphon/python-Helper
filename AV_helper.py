@@ -705,6 +705,20 @@ def AV_pairwise_add(a_p, b_p):
 
 	return np.add.outer(a_p, b_p)	
 
+def AV_pairwise_minus(a_p, b_p):
+	"""
+	Params:
+		a_p	: [a0, a1, ..., aM]
+		b_p : [b0, b1, ..., bN]
+
+	Return:
+		r_l : 	[[a0-b0  a0-b1 ... a0-bN ]
+ 				[a1-b0    .
+ 				[ ...          .
+ 				[aM-b0            aM-bN ]]
+	"""
+
+	return np.add.outer(a_p, -b_p)	
 
 def AV_add_singleton(A_p, axis_p=-1):
 	"""
