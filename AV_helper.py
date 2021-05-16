@@ -690,6 +690,10 @@ def AV_pairwise_product(a_p, b_p):
 
 	return np.outer(a_p, b_p)
 
+def AV_pairwise_add(a_p, b_p):
+
+	return np.add.outer(a_p, b_p)	
+
 
 def AV_add_singleton(A_p, axis_p=-1):
 	"""
