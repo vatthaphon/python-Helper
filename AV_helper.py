@@ -767,7 +767,7 @@ def AV_flatten_EEG(A_p, isPatch_p=True):
 	else:
 		return A_p.flatten("F")
 
-def AV_restore_EEG(a_p, N_times_l, N_trials_l):
+def AV_restore_EEG(a_p, N_times_l, N_trials_l, isPatch_p=True):
 	"""
 	Use with AV_flatten_EEG()
 
@@ -775,9 +775,15 @@ def AV_restore_EEG(a_p, N_times_l, N_trials_l):
 		a_p	: [N_times_l X N_trials_l]
 	"""
 
-	tmp_l = np.reshape(a_p, (int(N_times_l*3), N_trials_l), order='F')
+	if isPatch_p:
+		tmp_l = np.reshape(a_p, (int(N_times_l*3), N_trials_l), order='F')
 
-	return tmp_l[N_times_l:int(2*N_times_l), :]
+		return tmp_l[N_times_l:int(2*N_times_l), :]
+	else:
+		tmp_l = np.reshape(a_p, (int(N_times_l), N_trials_l), order='F')
+
+		return tmp_l[N_times_l:int(2*N_times_l), :]
+
 
 
 def AV_iscontainNaN(A_p):
