@@ -777,12 +777,10 @@ def AV_restore_EEG(a_p, N_times_l, N_trials_l, isPatch_p=True):
 
 	if isPatch_p:
 		tmp_l = np.reshape(a_p, (int(N_times_l*3), N_trials_l), order='F')
-
-		return tmp_l[N_times_l:int(2*N_times_l), :]
 	else:
 		tmp_l = np.reshape(a_p, (int(N_times_l), N_trials_l), order='F')
 
-		return tmp_l[N_times_l:int(2*N_times_l), :]
+	return tmp_l[N_times_l:int(2*N_times_l), :]
 
 
 
