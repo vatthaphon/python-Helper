@@ -752,9 +752,9 @@ def AV_flatten(A_p, axis_begin_p=0, axis_end_p=None):
 	
 		return A_p.reshape(*A_p.shape[:axis_begin_p], -1, *A_p.shape[end_l:])
 
-def AV_flatten_EEG(A_p):
+def AV_flatten_EEG(A_p, isPatch_p=True):
 	"""
-	Use with AV_restore_EEG(). This functions flat trials, i.e. A_p[1, 0] == Results[1]
+	Use with AV_restore_EEG(). This functions flat trials, i.e. A_p[1, 0] == Results[1] in case of isPatch_p == False
 
 	Params:
 		A_p	: [Times, Trials]
@@ -762,7 +762,10 @@ def AV_flatten_EEG(A_p):
 
 	flipped_A_l = np.flip(A_p, axis=0)
 
-	return (AV_axisX_concat( (flipped_A_l, A_p, flipped_A_l) , axis_p=0)).flatten("F")
+	if isPatch_p:
+		return (AV_axisX_concat( (flipped_A_l, A_p, flipped_A_l) , axis_p=0)).flatten("F")
+	else:
+		return A_p.flatten("F")
 
 def AV_restore_EEG(a_p, N_times_l, N_trials_l):
 	"""
