@@ -754,7 +754,7 @@ def AV_flatten(A_p, axis_begin_p=0, axis_end_p=None):
 
 def AV_flatten_EEG(A_p):
 	"""
-	Use with AV_restore_EEG()
+	Use with AV_restore_EEG(). This functions flat trials, i.e. A_p[1, 0] == Results[1]
 
 	Params:
 		A_p	: [Times, Trials]
