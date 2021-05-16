@@ -691,6 +691,17 @@ def AV_pairwise_product(a_p, b_p):
 	return np.outer(a_p, b_p)
 
 def AV_pairwise_add(a_p, b_p):
+	"""
+	Params:
+		a_p	: [a0, a1, ..., aM]
+		b_p : [b0, b1, ..., bN]
+
+	Return:
+		r_l : 	[[a0+b0  a0+b1 ... a0+bN ]
+ 				[a1+b0    .
+ 				[ ...          .
+ 				[aM+b0            aM+bN ]]
+	"""
 
 	return np.add.outer(a_p, b_p)	
 
