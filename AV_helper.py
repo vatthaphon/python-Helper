@@ -675,6 +675,22 @@ def AV_mem_display_top(snapshot, key_type='lineno', limit=3):
     print("Total allocated size: %.1f KiB" % (total / 1024))
 
 ################################ Array ################################
+def AV_pairwise_product(a_p, b_p):
+	"""
+	Params:
+		a_p	: [a0, a1, ..., aM]
+		b_p : [b0, b1, ..., bN]
+
+	Return:
+		r_l : 	[[a0*b0  a0*b1 ... a0*bN ]
+ 				[a1*b0    .
+ 				[ ...          .
+ 				[aM*b0            aM*bN ]]
+	"""
+
+	return np.outer(a_p, b_p)
+
+
 def AV_add_singleton(A_p, axis_p=-1):
 	"""
 	Params:
