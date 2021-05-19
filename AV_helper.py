@@ -782,8 +782,6 @@ def AV_restore_EEG(a_p, N_times_l, N_trials_l, isPatch_p=True):
 
 	return tmp_l[N_times_l:int(2*N_times_l), :]
 
-
-
 def AV_iscontainNaN(A_p):
 	
 	return np.isnan(A_p).any()
