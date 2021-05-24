@@ -730,7 +730,7 @@ def AV_expand_dims(A_p, N_reps_p, axis_p=-1)
 
 	A_p = AV_add_singleton(A_p, axis_p=axis_p)
 
-	return np.tile(A_p, (1, 1, N_channel_B_l))
+	return np.tile(A_p, (1, 1, N_reps_p))
 
 def AV_add_singleton(A_p, axis_p=-1):
 	"""
