@@ -720,7 +720,7 @@ def AV_pairwise_minus(a_p, b_p):
 
 	return np.add.outer(a_p, -b_p)	
 
-def AV_expand_dims(A_p, N_reps_p, axis_p=-1)
+def AV_expand_dims(A_p, N_reps_p, axis_p=-1):
 	"""
 	Params:
 		A_p			: a numpy array
