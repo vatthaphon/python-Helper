@@ -730,6 +730,9 @@ def AV_expand_dims(A_p, N_reps_p, axis_p=-1):
 
 	A_p = AV_add_singleton(A_p, axis_p=axis_p)
 
+	if axis_p == -1:
+		axis_p = A_p.ndim - 1
+
 	size_l = []
 	for i_l in range(A_p.ndim):
 		if i_l == axis_p:
