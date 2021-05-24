@@ -832,7 +832,7 @@ def AV_rank1(x):
 	kv = sorted(rank.items(), key = lambda p: p[1])
 
 	for i in range(len(kv)):
-	    kv[i] = (kv[i, 0], i)
+	    kv[i] = (kv[i][0], i)
 
 	rank = { p[0]: p[1] for p in kv }
 
