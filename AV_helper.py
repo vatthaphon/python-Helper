@@ -720,6 +720,18 @@ def AV_pairwise_minus(a_p, b_p):
 
 	return np.add.outer(a_p, -b_p)	
 
+def AV_expand_dims(A_p, N_reps_p, axis_p=-1)
+	"""
+	Params:
+		A_p			: a numpy array
+		N_reps_p	: The number of repitions
+		axis_p		: The axis of the new matrix that we want to add
+	"""
+
+	A_p = AV_add_singleton(A_p, axis_p=axis_p)
+
+	return np.tile(A_p, (1, 1, N_channel_B_l))
+
 def AV_add_singleton(A_p, axis_p=-1):
 	"""
 	Params:
