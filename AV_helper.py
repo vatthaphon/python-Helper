@@ -724,11 +724,18 @@ def AV_expand_dims(A_p, N_reps_p, axis_p=-1):
 	"""
 	Params:
 		A_p			: a numpy array
-		N_reps_p	: The number of repitions
+		N_reps_p	: The number of repititions
 		axis_p		: The axis of the new matrix that we want to add
 	"""
 
 	A_p = AV_add_singleton(A_p, axis_p=axis_p)
+
+	size_l = []
+	for i_l in range(A_p.ndim):
+		if i_l == axis_p:
+			size_l.append(N_reps_p)
+		else:
+			size_l.append(1)
 
 	return np.tile(A_p, (1, 1, N_reps_p))
 
