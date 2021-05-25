@@ -833,7 +833,6 @@ def AV_concat(tuples_p):
 	
 	return np.hstack(tuples_p)
 
-
 def AV_rank1(x):
 	"""
 	This functions rank the items 40 times faster than AV_rank2.
