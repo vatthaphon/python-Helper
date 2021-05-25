@@ -838,6 +838,12 @@ def AV_rank1(x):
 	"""
 	This functions rank the items 40 times faster than AV_rank2.
 	See https://stackoverflow.com/questions/36971201/map-array-of-numbers-to-rank-efficiently-in-python
+
+	Params:
+		x	: a 1D numpy array
+
+	Return:
+		r	: a 1D numpy array with 0 as the lowest rank. And [0, 1.1, 1.1, 2.0] => [0 1 1 2].
 	"""
 
 	# Sort values i = 0, 1, 2, .. using x[i] as key
