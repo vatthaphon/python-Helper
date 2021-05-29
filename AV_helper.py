@@ -983,6 +983,13 @@ def AV_append_to_excel(FN_p, new_rows_p, sheet_name_p='Sheet1'):
 
 	wb_l.save(FN_p)
 
+def AV_is_complex(arr_p):
+
+    if "complex" in str(arr_p.dtype):
+        return True
+    else:
+        return False
+
 def AV_is_numeric(arr_p):
 
 	try:
