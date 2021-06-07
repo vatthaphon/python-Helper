@@ -991,6 +991,9 @@ def AV_is_complex(arr_p):
         return False
 
 def AV_is_numeric(arr_p):
+	"""
+	np.array([None]).astype(float) = NaN
+	"""
 
 	try:
 		arr_p.astype(float)
