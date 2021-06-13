@@ -982,7 +982,7 @@ def AV_append_to_excel(FN_p, new_rows_p, sheet_name_p='Sheet1'):
 		ws_l.cell(row=row_l, column=col, value=entry)
 
 	wb_l.save(FN_p)
-
+	
 def AV_is_complex(arr_p):
 
     if "complex" in str(arr_p.dtype):
