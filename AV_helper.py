@@ -1143,6 +1143,28 @@ def AV_bytes_to_uint32(a_p):
 
     return np.uint32((a_p[0] << 24) | (a_p[1] << 16) | (a_p[2] << 8) | a_p[3])
 
+def AV_uint64_to_bytes(a_p, num_p: np.uint64):
+    """
+    a_p[0] is the leading bit.
+    """
+
+    import struct
+
+    a_p[:] = (list(map(int, struct.pack('>Q', num_p))))[:]
+
+def AV_uint32_to_bytes(a_p, num_p: np.uint32):
+    """
+    a_p[0] is the leading bit.
+    """
+    
+    import struct
+
+    num_p = np.uint64(num_p)
+
+    tmp_l = (list(map(int, struct.pack('>Q', num_p))))[:]
+
+    a_p[:] = tmp_l[4:]    
+
 ################################ Convertor ################################
 def AV_interp1d(x_p, y_p, new_x_p):
 	"""
