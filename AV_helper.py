@@ -1129,6 +1129,11 @@ def AV_pandas_append_df_to_excel(filename, df, sheet_name='Sheet1', startrow=Non
     # save the workbook
     writer.save()
 
+def AV_bytes_to_uint64(a_p):
+    return np.uint64((a_p[0] << 56) | (a_p[1] << 48) | (a_p[2] << 40) | (a_p[3] << 32) | (a_p[4] << 24) | (a_p[5] << 16) | (a_p[6] << 8) | a_p[7])
+
+def AV_bytes_to_uint32(a_p):
+    return np.uint32((a_p[0] << 24) | (a_p[1] << 16) | (a_p[2] << 8) | a_p[3])
 
 ################################ Convertor ################################
 def AV_interp1d(x_p, y_p, new_x_p):
