@@ -1134,7 +1134,7 @@ def AV_bytes_to_uint64(a_p):
 	a_p[0] is the leading bit.
 	"""
 
-    return np.uint64((a_p[0] << 56) | (a_p[1] << 48) | (a_p[2] << 40) | (a_p[3] << 32) | (a_p[4] << 24) | (a_p[5] << 16) | (a_p[6] << 8) | a_p[7])
+	return np.uint64((a_p[0] << 56) | (a_p[1] << 48) | (a_p[2] << 40) | (a_p[3] << 32) | (a_p[4] << 24) | (a_p[5] << 16) | (a_p[6] << 8) | a_p[7])
 
 def AV_bytes_to_uint32(a_p):
 	"""
