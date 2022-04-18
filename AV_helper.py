@@ -1360,6 +1360,33 @@ def AV_xlsx_read(FN_p, sheet_name_p="Sheet1"):
 def AV_N_freq_for_Morlet(): # Not all source codes are updated to the new function of retriving the number frequency of Morlet
 	return 50
 
+def AV_inter_delta_lbd():
+	"""
+	Kane, N., et al (2017). Clinical neurophysiology practice, 2, 170-185.
+	"""
+	return 0.5
+
+def AV_inter_delta_ubd():
+	return 4.0
+
+def AV_inter_theta_lbd():
+	return 4.0
+
+def AV_inter_theta_ubd():
+	return 8.0
+
+def AV_inter_alpha_lbd():
+	return 8.0
+
+def AV_inter_alpha_ubd():
+	return 13.0
+
+def AV_inter_beta_lbd():
+	return 13.0
+
+def AV_inter_beta_ubd():
+	return 30.0	
+
 def AV_slow_drift_ubd():
 	return 0.5
 
